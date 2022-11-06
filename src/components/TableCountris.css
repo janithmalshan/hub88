@@ -1,0 +1,25 @@
+.ui-table {
+  width: 80%;
+  margin: 24px auto;
+  border: none;
+}
+.ui-table th {
+  background-color: #ff63a0;
+  width: 50%;
+}
+.ui-table tr {
+  background-color: #f1f1f1;
+}
+.ui-table__input {
+  width: 120px;
+  height: 30px;
+  margin: 12px auto 12px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  opacity: 0.9;
+  border-radius: 20px;
+  outline: none;
+  padding: 0 20px;
+}
