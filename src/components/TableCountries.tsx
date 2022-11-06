@@ -35,19 +35,20 @@ function TableCountries() {
             <table className='ui-table'>
                 <tr>
                     <th>Country Name</th>
-                    <th>Country Code <input className='ui-table__input' placeholder='Filter' maxLength={2} onChange={(event => {
+                    <th>Country Code <input data-testid='input-c-code' className='ui-table__input' placeholder='Filter' maxLength={2} onChange={(event => {
                         setFilterText(event.target.value)
                     })}/></th>
                 </tr>
                 {data.countries.filter((country:Country) => {
-                    if (filterText == "") {
+                    if (filterText === "") {
                         return country
                     } else if (country.code.toLowerCase().includes(filterText.toLowerCase())) {
                         return country
                     }
                 }).map((country:Country) => (
                     <tr key={country.code}>
-                        <td>{country.name}</td><td>{country.code}</td>
+                        <td>{country.name}</td>
+                        <td data-testid={country.code}>{country.code}</td>
                     </tr>
                 ))}
             </table>
